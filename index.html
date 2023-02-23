@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="content_container">
+      <div id="form_container">
+        <div id="form_header_container">
+          <h2 id="form_header">Login + Signup</h2>
+          <p style="color: aliceblue">
+            For Log In, type only Email and Password
+          </p>
+        </div>
+
+        <div id="form_content_container">
+          <div id="form_content_inner_container">
+            <input type="text" id="full_name" placeholder="Full name" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="New Password" />
+
+            <p id="error-line" style="color: red"></p>
+
+            <div id="button_container">
+              <button onclick="login()">Login</button>
+              <button onclick="register()">Register</button>
+            </div>
+          </div>
+          <div id="logged_in_content" style="color: aliceblue; display: none">
+            <h1>Welcome</h1>
+            <br />
+            <h3 id="user-name"></h3>
+            <br />
+            <div id="button_container">
+              <button onclick="logoutHandler()">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
